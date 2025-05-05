@@ -1,5 +1,94 @@
 # wede-poe 
-STRUCTURE OF WEBSITE  
+Structure of Website 
+
+                            CSS
+ 
+<link> -To link the  CSS stylesheet with the HTML files   
+
+Home/Index page  
+
+<link> to link CSS stylesheet with html file 
+<header>background color #f7c59f
+Padding 20px 
+Text-align:center 
+<nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
+<div>font size 24px ;font weight :bold :color :white  
+<a herf”#” style text decoration :none :color white  ;text align left  
+<ul> style =”list style :none; margin :0:padding:0;display:flex; 
+<h1>  font-size 110px ;font style oblique;text-align :center 
+<h2> font-size 110px;font style oblique;text-align:center   
+< p1>-<p3> font-25px;margin 25px;line-height 1.6  
+
+ABOUT US   
+<link> to link CSS stylesheet with html file 
+<header>background color #f7c59f
+Padding 20px 
+Text-align:center 
+<nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
+<div>font size 24px ;font weight :bold :color :white  
+<a herf”#” style text decoration :none :color white  ;text align left  
+<ul> style =”list style :none; margin :0:padding:0;display:flex; 
+<h1><h1>  font-size 110px ;font style oblique;text-align :center  
+< p1>-<p3> font-25px;margin 25px;line-height 1.6  
+<img> style =width;775pc;height 775px; padding:100px
+<footer>style left :0;right0; background color ;brown  
+
+CONTACT US  
+
+<link> to link CSS stylesheet with html file 
+<header>background color #f7c59f
+Padding 20px 
+Text-align:center 
+<nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
+<div>font size 24px ;font weight :bold :color :white  
+<a herf”#” style text decoration :none :color white  ;text align left  
+<ul> style =”list style :none; margin :0:padding:0;display:flex; 
+<h1 –h4>  font-size 110px ;font style oblique;text-align :center 
+< p1>-<p14> font-25px;margin 25px;line-height 1.6   
+<footer>style left :0;right0; background color ;brown   
+
+NEWS 
+<link> to link CSS stylesheet with html file 
+<header>background color #f7c59f
+Padding 20px 
+Text-align:center 
+<nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
+<div>font size 24px ;font weight :bold :color :white  
+<a herf”#” style text decoration :none :color white  ;text align left  
+<ul> style =”list style :none; margin :0:padding:0;display:flex; 
+<h1-h6>  font-size 110px ;font style oblique;text-align :center    
+< p1>-<p7> font-25px;margin 25px;line-height 1.6   
+<footer>style left :0;right0; background color ;brown   
+
+SERVICE  
+
+<link> to link CSS stylesheet with html file 
+<header>background color #f7c59f
+Padding 20px 
+Text-align:center 
+<nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
+<div>font size 24px ;font weight :bold :color :white  
+<a herf”#” style text decoration :none :color white  ;text align left  
+<ul> style =”list style :none; margin :0:padding:0;display:flex; 
+<h1-h5>  font-size 50px ;font style oblique;text-align :center 
+< p1>-<p4> font-25px;margin 25px;line-height 1.6   
+<footer>style left :0;right0; background color ;brown    
+
+
+
+
+
+
+
+
+
+
+
+
+
+STRUCTURE OF WEBSITE 
+
+
 
 
 
