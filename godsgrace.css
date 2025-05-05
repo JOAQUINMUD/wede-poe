@@ -1,0 +1,80 @@
+
+body{
+font-family: 'Segoe UI';
+text-align: center;
+    
+}
+.h1{
+  font-size: 90PX;
+    font-style: oblique;
+     text-align: center;
+      margin: 20px 0 ;
+    
+}
+.p1{font-size: 25px;
+     margin: 15px 0;
+      line-height: 1.6;
+      text-align: center;
+}    
+.numberlist{
+      list-style: none;
+       margin:0 ;
+      padding: 5;
+       display: flex;
+       
+}
+.h2{font-size: 90px; 
+  font-style: oblique; 
+  text-align: center;
+  margin: 20px 0 ;
+  }  
+.title{
+  font-size: 24px;
+   font-weight: bold; 
+   color: white;
+  } 
+.nav1{
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+   padding: 0 20px; 
+}
+.nav{background-color: #d46a6a;
+   overflow: hidden;
+    position: fixed; 
+    width: 100%; top: 0;
+     z-index: 1000;
+    }
+.title1{text-decoration: none;
+   color: white;
+  }   
+  .header{
+    
+    background-color: #f7c59f;
+    padding: 20px 0;
+     text-align:center ;
+  }
+  .body{
+    font-family: 'Segoe UI';
+    background-color: #fff8f0;
+    color: #333;
+    margin: 0;
+    padding: 0;  
+  }
+  .ul{list-style: none;
+    margin:0 ; 
+    padding: 0; 
+    display: flex;
+  }
+  .p1{
+    list-style: none; 
+    margin:0 ;
+    padding: 0;
+    display: flex;
+    font-size: 25px;
+     margin: 15px 0; 
+     line-height: 1.6;
+  }
+  .footer{
+   background-color: #f7c59f;
+  }
