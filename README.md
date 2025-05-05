@@ -3,7 +3,14 @@ Structure of Website
 
                             CSS
  
-<link> -To link the  CSS stylesheet with the HTML files   
+<link> -To link the  CSS stylesheet with the HTML files  
+
+![image](https://github.com/user-attachments/assets/20096e4f-2650-45f9-8884-f38abdce6474) 
+![image](https://github.com/user-attachments/assets/8cde3207-6b99-4f53-b4a8-b333cd8448d6) 
+![image](https://github.com/user-attachments/assets/03d90fa8-77b7-4fad-aba4-c147b3b3b784)
+
+
+
 
 Home/Index page  
 
@@ -13,7 +20,7 @@ Padding 20px
 Text-align:center 
 <nav> display-flex ;justify-content ;space between ;align items center ;padding 20px 
 <div>font size 24px ;font weight :bold :color :white  
-<a herf”#” style text decoration :none :color white  ;text align left  
+<a herf”#” style text decoration :none : color white  ;text align left  
 <ul> style =”list style :none; margin :0:padding:0;display:flex; 
 <h1>  font-size 110px ;font style oblique;text-align :center 
 <h2> font-size 110px;font style oblique;text-align:center   
