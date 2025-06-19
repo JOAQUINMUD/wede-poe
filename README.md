@@ -1,5 +1,112 @@
 # wede-poe 
-Structure of Website 
+Addtions from part 2 
+
+Services Page 
+Click on service headings to toggle details
+Hover effects on all service sections
+
+Prominent call-to-action button linking to contact page
+Hover animation effects
+
+Appears when scrolling down
+Smooth scroll to top of page
+
+Smooth scrolling to sections
+Navbar shrinks slightly when scrolling
+Services animate as you scroll down
+Smooth fade-in and slide-up effects
+Adapts to different screen sizes
+Adjusted font sizes for better readability
+
+Hover effects on navigation links
+Visual feedback for buttons and service items 
+
+About us page  
+
+Toggle button in bottom right corner
+Remembers user preference using localStorage
+Appears when scrolling down
+Smooth scroll to top of page
+Click product image to enlarge
+Click again to return to normal size
+"God's grace is with you always" types out automatically
+Navbar shrinks slightly when scrolling down
+Smooth scrolling when clicking menu links
+Fade-in and slide-up effects for content
+Welcome message popup
+All features work on mobile devices
+Adjusted styling for smaller screens
+Hover effects on navigation links
+Visual feedback for buttons 
+
+News 
+
+
+Form validation
+Submission handling with confirmation message
+News items animate as you scroll down
+Smooth fade-in and slide-up effects
+Appears when scrolling down
+Smooth scroll to top of page
+Smooth scrolling to sections
+Navbar shrinks slightly when scrolling
+Adapts to different screen sizes
+Stacked layout on small screens
+Hover effects on navigation links
+Visual feedback for button
+Friendly alert when page loads  
+
+Index  
+
+
+Button in bottom right to switch between color themes
+Smooth transition between modes
+Headings scale up on page load
+Product image zooms on hover and click
+Intro box lifts up on hover with shadow effect
+Toggle button to show/hide product features
+Clickable product image that zooms in/out
+Popup form that appears when clicking "Join Our Newsletter"
+Form validation and submission handling
+Can be closed by clicking X or outside the modal
+Uses localStorage to track and display page visits
+Shows personalized message to returning visitors
+Navbar shrinks slightly and gains shadow when scrolling down
+Underline animation for navigation links on hover
+Double-click the main heading for a fun message change
+All interactive elements work on mobile devices
+Touch-friendly buttons and controls 
+
+Contact us 
+
+
+Form validation
+Submission handling with confirmation message
+Proper input fields with labels
+Phone numbers are clickable (will open dialer on mobile)
+Email address is clickable (opens email client)
+Appears when scrolling down
+Smooth scroll to top
+Smooth scrolling to sections
+Navbar shrinks slightly when scrolling
+Interactive hover effects
+Ready for actual links to be added
+Adapts to different screen sizes
+Form stacks vertically on small screens
+Automatic detection and linking of phone/email
+Clean presentation of contact details
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ Structure of Website 
 
                             CSS
  
