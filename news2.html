@@ -1,89 +1,326 @@
 news.html 
-<html>
-    <head> 
-        meta charset="UTF-8">
-      <title>God's Grace Bags</title> 
-      <link rel="stylesheet" href="godsgrace.css">
-    </head> 
-    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff8f0; color: #333; margin: 0; padding: 0;">
-      <!--fixed navbar--> 
-      <header style="background-color: #f7c59f; padding: 20px 0; text-align:center ;">
-    <nav style="background-color: #d46a6a; overflow: hidden; position: fixed; width: 100%; top: 0; z-index: 1000;">
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;"> 
-        <div style="font-size: 24px; font-weight: bold; color: white;"> 
-          <a href="#" style="text-decoration: none; color: white; text-align: left;"> GOD'S GRACE BAGS</a> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - God's Grace Bags</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff8f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /* Fixed Navbar */
+        nav {
+            background-color: #d46a6a;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #f7c59f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #f7c59f;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        /* Main Content */
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 110px;
+            font-style: oblique;
+            text-align: center;
+            margin: 20px 0;
+            color: #d46a6a;
+        }
+        .news-box {
+            background-color: #fff;
+            border: 2px solid #f7c59f;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 25px;
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .news-item {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #f7c59f;
+            transition: all 0.3s;
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            font-weight: bold;
+            color: #d46a6a;
+        }
+        /* Footer */
+        footer {
+            background-color: #f7c59f;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-links li {
+            margin: 0 15px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .footer-links a:hover {
+            color: #d46a6a;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #d46a6a;
+            margin: 20px 0;
+        }
+        /* Newsletter Signup */
+        .newsletter {
+            background-color: #f7c59f;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .newsletter h3 {
+            margin-top: 0;
+        }
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .newsletter-form input {
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px;
+            min-width: 250px;
+        }
+        .newsletter-form button {
+            background-color: #d46a6a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        .newsletter-form button:hover {
+            background-color: #c55a5a;
+        }
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 60px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header>
+        <nav id="mainNav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">GOD'S GRACE BAGS</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus2.html">Contact Us</a></li>
+                    <li><a href="news2.html">News</a></li>
+                    <li><a href="services2.html">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>GOD'S GRACE BAGS PTY</h1>
+        <h1>NEWS</h1>
+
+        <div class="news-box">
+            <p>WELCOME TO GOD'S GRACE BAGS NEWS PAGE</p>
+            
+            <div class="news-item">
+                <h2>LATEST NEWS - God's Grace Bags</h2>
+                <p>Stay updated with our latest announcements, product launches, special offers, and inspiring stories. We are more than just a brand - we are a community built on faith, grace, and purpose.</p>
+            </div>
+
+            <div class="news-item">
+                <h2>FEATURED NEWS</h2>
+                <h3>NEW COLLECTION ALERT: FAITH & FASHION</h3>
+                <p class="news-date">Posted on: 23 February 2025</p>
+                <p>We are thrilled to introduce our latest collection, 'Faith & Fashion' - a beautiful blend of style and spirituality. Each bag in this collection features uplifting scriptures and elegant designs to remind you of God's presence in your daily life.</p>
+            </div>
+
+            <div class="news-item">
+                <h2>ANNOUNCEMENTS</h2>
+                <h3>Join our Ambassador Program!</h3>
+                <p>Are you passionate about faith-based fashion? We are looking for new models to showcase our new collection. Visit our nearest stores to submit your application and enjoy our exclusive perks, discounts and collaborations.</p>
+            </div>
+
+            <div class="news-item">
+                <h2>CUSTOMER APPRECIATION WEEK</h2>
+                <p>As a thank-you to our amazing customers, we're hosting a Customer Appreciation Week with special discounts, giveaways, and shoutouts! Stay tuned for more details on how you can participate.</p>
+            </div>
+
+            <div class="news-item">
+                <h2>UPCOMING SALES & PROMOTIONS</h2>
+                <p>Easter Special - 20% off all bags!</p>
+                <p>Get ready for our Easter Sale! Celebrate the season of renewal with 20% off our faith-inspired Bags. Offer valid from 17 April to 29 April.</p>
+            </div>
+
+            <div class="newsletter">
+                <h3>STAY UPDATED</h3>
+                <p>Subscribe to our newsletter to receive the latest news and promotions directly to your inbox!</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-    
-        <ul style="list-style: none; margin:0 ; padding: 0; display: flex;">
-         <li style="margin-left: 20px;"><a href="index.html" style="text-decoration: none; color: white; font-weight: bold;">Home</a></li>
-          <li style="margin-left: 20px;"><a href="aboutus.html" style="text-decoration: none; color: white; font-weight: bold;">Aboutus</a></li>
-         <li style="margin-left: 20px;"><a href="contactus2.html" style="text-decoration: none; color: white; font-weight: bold;"> Contactus</a></li> 
-          <li style="margin-left: 20px;"><a href="news2.html"style="text-decoration: none; color: white; font-weight: bold;">News</a></li>
-         <li style="margin-left: 20px;"><a href="services2.html" style="text-decoration: none; color: white; font-weight: bold;">Services</a></li> 
-          </ul>
-       </div>
-     </nav>
-  </header> 
-  <!--Add space to prevent conetent from being hidden behind the fixed bar --> 
-  <div style="margin-top: 100px;"><!--Increased space for fixed navbar -->
-  <h1 style="font-size: 110PX;font-style: oblique; text-align: center; margin: 20px 0 ;">GOD'S GRACE BAGS  PTY</h1>   
-        <body> 
-            
-            
-            
-            
-            
-            <h1 style="font-size: 110px; font-style: oblique; text-align: center; margin: 20px 0 ;">News</h1>  
+    </div>
 
-            <div style="background-color: #fff; border-radius: 2px solid #f7c59f; border-radius: 15px; padding: 30px; max-width: 800px; margin: 0 auto 40px; box-shadow: 0 120pxs;">
-                <P1 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">WELCOME TO GODS GRACE BAGS</P1> <br> 
-                
-            <h2 style="font-size: 50PX;font-style: oblique; text-align: center; margin: 20px 0 ;">LATEST NEWS-God's Grace Bags</h2> 
-            <p1 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Welcome to the God's Grace Bags News Page! Stay updated with our latest announcements,product launches
-                ,special offers,and inspiring stories.We are more than just a brand-we are a community built on faith,grace,and 
-                purpose
-            </p1> 
-             
-            <h2 style="font-size: 50PX;font-style: oblique; text-align: center; margin: 20px 0 ;">FEARTURED NEWS</h2>
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus2.html">Contact Us</a></li>
+            <li><a href="news2.html">News</a></li>
+            <li><a href="services2.html">Services</a></li>
+        </ul>
+    </footer>
 
-            <h3 style="font-size: 40PX;font-style: oblique; text-align: center; margin: 20px 0 ;"> NEW COLLECTION ALERT:FAITH&FASHION</h3>
+    <script>
+        // Navigation verification
+        document.querySelectorAll('nav a, footer a').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log(`Navigating to: ${this.getAttribute('href')}`);
+                // Default navigation behavior will occur
+            });
+        });
 
-            <p2 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Posted on:23 february 2025</p2> 
-            <p3 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">We are thrilled to introduced our latest collection,'Faith&Fashion"-a beutiful blend of style and sprituality
-                .Each bag in this collection features uplifting scriptures and elegant designs to remind you of God's presence
-                in your daily 
+        // Newsletter form submission
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            alert(`Thank you for subscribing with ${email}! You'll now receive our latest updates.`);
+            this.reset();
+        });
 
-            </p3>
-
-            <h4 style="font-size: 50PX;font-style: oblique; text-align: center; margin: 20px 0 ;">ANNOUNCEMENTS</h4>
-
-            <h5 style="font-size: 30PX;font-style: oblique; text-align: center; margin: 20px 0 ;">Join our Ambassador Program!</h5>
-
-            <p4 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Are you passionate about faith-based fashion?We are looking for new models to model our new collection 
-                .Visit our nearest stores to send in your documents.And get to enjoy our exclusive perks,discountsand collaborations 
-            
-            </p4> 
-
-            <h6 style="font-size: 50PX;font-style: oblique; text-align: center; margin: 20px 0 ;">CUSTOMER APPRECIATION WEEK</h6> 
-
-            <p5 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">As a thank-you to our amazing custormers,we're hosting a Custormer Appreciation Week with special discounts
-                ,giveaways,and shoutouts!Stay tuned for more details on how you can participate
-            </p5>
-
-
-            <h7 style="font-size: 50PX;font-style: oblique; text-align: center; margin: 20px 0 ;">UPCOMING SALES&PROMOTIONS</h7>
-
-            <p6 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Easter Special-20% off all bags!</p6>
-
-            <p7 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Get ready for our Easter Sale!<br> Celebrate the season of renewal with 20% off our faith inspired Bags
-            . Offer valid from 17 april to 29 april </p7> 
-
-            <footer style="left: 0; right: 0;  background-color:brown;">
-              &copy; <p style="color: white; text-align: center;">God's Grace 2025</p>
-            </footer>
-
-            
-
-        </body>
-    </head>
+        // Welcome message
+        window.addEventListener('load', () => {
+            console.log("News page loaded successfully");
+            alert("Welcome to God's Grace Bags News!");
+        });
+    </script>
+</body>
 </html>

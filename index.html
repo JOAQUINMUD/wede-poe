@@ -1,57 +1,268 @@
-index.html  
-<html>  
-    <head> 
 
-      <meta charset="UTF-8">
-      <title>God's Grace Bags</title> 
-      <link rel="stylesheet" href="godsgrace.css">
-    </head> 
-    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff8f0; color: #333; margin: 0; padding: 0;">
-      <!--fixed navbar--> 
-      <header style="background-color: #f7c59f; padding: 20px 0; text-align:center ;">
-    <nav style="background-color: #d46a6a; overflow: hidden; position: fixed; width: 100%; top: 0; z-index: 1000;">
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;"> 
-        <div style="font-size: 24px; font-weight: bold; color: white;"> 
-          <a href="#" style="text-decoration: none; color: white; text-align: left;"> GOD'S GRACE BAGS</a> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - God's Grace Bags</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff8f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /* Fixed Navbar */
+        nav {
+            background-color: #d46a6a;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #f7c59f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #f7c59f;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        /* Main Content */
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 110px;
+            font-style: oblique;
+            text-align: center;
+            margin: 20px 0;
+            color: #d46a6a;
+        }
+        .intro-box {
+            background-color: #fff;
+            border: 2px solid #f7c59f;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 25px;
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .product-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        .product-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        /* Footer */
+        footer {
+            background-color: #f7c59f;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-links li {
+            margin: 0 15px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .footer-links a:hover {
+            color: #d46a6a;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #d46a6a;
+            margin: 20px 0;
+        }
+        /* Call-to-action Button */
+        .cta-button {
+            display: block;
+            background-color: #d46a6a;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 40px auto;
+            transition: all 0.3s;
+            text-align: center;
+            max-width: 300px;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #c55a5a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 60px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header>
+        <nav id="mainNav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">GOD'S GRACE BAGS</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus2.html">Contact Us</a></li>
+                    <li><a href="news2.html">News</a></li>
+                    <li><a href="services2.html">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>GOD'S GRACE BAGS PTY</h1>
+        <h1>FAITH INSPIRED BAGS FOR EVERYDAY LIFE</h1>
+
+        <div class="intro-box">
+            <p>WELCOME TO GOD'S GRACE BAGS</p>
+            <p>Where Faith meets fashion. Our collection of beautifully crafted bags is designed to inspire, uplift and remind you of God's grace in every step of your journey.</p>
+            <p>Whether you're looking for a stylish tote, a durable backpack or an elegant purse, we have something for every believer.</p>
+            
+            <img src="images2/ggb hand bag.jpg" alt="God's Grace Product " class="product-image">
+            
+            <a href="services2.html" class="cta-button">Explore Our Collection</a>
         </div>
-    
-        <ul style="list-style: none; margin:0 ; padding: 0; display: flex;">
-         <li style="margin-left: 20px;"><a href="index.html" style="text-decoration: none; color: white; font-weight: bold;">Home</a></li>
-          <li style="margin-left: 20px;"><a href="aboutus.html" style="text-decoration: none; color: white; font-weight: bold;">Aboutus</a></li>
-         <li style="margin-left: 20px;"><a href="contactus2.html" style="text-decoration: none; color: white; font-weight: bold;"> Contactus</a></li> 
-          <li style="margin-left: 20px;"><a href="news2.html"style="text-decoration: none; color: white; font-weight: bold;">News</a></li>
-         <li style="margin-left: 20px;"><a href="services2.html" style="text-decoration: none; color: white; font-weight: bold;">Services</a></li> 
-          </ul>
-       </div>
-     </nav>
-  </header> 
-  <!--Add space to prevent conetent from being hidden behind the fixed bar --> 
-  <div style="margin-top: 100px;"><!--Increased space for fixed navbar -->
-  <h1 style="font-size: 110PX;font-style: oblique; text-align: center; margin: 20px 0 ;">GOD'S GRACE BAGS  PTY</h1>  
- 
-  <h2 style="font-size: 110px; font-style: oblique; text-align: center; margin: 20px 0 ;">FAITH INSPIRED BAGS FOR EVERYDAY LIFE</h2> 
+    </div>
 
-  <div style="background-color: #fff; border-radius: 2px solid #f7c59f; border-radius: 15px; padding: 30px; max-width: 800px; margin: 0 auto 40px; box-shadow: 0 120px;">
-  <P1 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">WELCOME TO GODS GRACE BAGS</P1> <br>
-  <br>
-  <p2 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Where Faith meets fashion .OUR collection of beutifully crafted bags is designed to inspire,uplift
-    and remind you of Gods grace in every step of your journey.<br>
-  </p2> <br>
-  <p3 style="font-size: 25px; margin: 15px; line-height: 1.6;">Whether you're looking for a stylish tote ,a durable backpack or an elegant purse ,we have something for every believer</p3>
-  <br> 
-  <br>
-  <img src="images2/ggb hand bag.jpg"> 
-  <br>  
-  
-  
-
-
-
-    <footer style="left: 0; right: 0;  background-color:brown;">
-          &copy; <p style="color: white; text-align: center;">God's Grace 2025</p>
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus2.html">Contact Us</a></li>
+            <li><a href="news2.html">News</a></li>
+            <li><a href="services2.html">Services</a></li>
+        </ul>
     </footer>
-  
 
+    <script>
+        // Navigation verification
+        document.querySelectorAll('nav a, footer a').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log(`Navigating to: ${this.getAttribute('href')}`);
+                // Default navigation behavior will occur
+            });
+        });
+
+        // Image zoom effect
+        document.querySelector('.product-image').addEventListener('click', function() {
+            if (this.style.transform === 'scale(1.5)') {
+                this.style.transform = 'scale(1)';
+            } else {
+                this.style.transform = 'scale(1.5)';
+            }
+        });
+
+        // Welcome message
+        window.addEventListener('load', () => {
+            console.log("Home page loaded successfully");
+            alert("Welcome to God's Grace Bags!");
+        });
+    </script>
 </body>
-
-</html>
+</html

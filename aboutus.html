@@ -1,72 +1,225 @@
-Aboutus.html 
-<html>  
-    <head> 
 
-      <meta charset="UTF-8">
-      <title>God's Grace Bags</title> 
-      <link rel="stylesheet" href="godsgrace.css">
-    </head> 
-    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff8f0; color: #333; margin: 0; padding: 0;">
-      <!--fixed navbar--> 
-      <header style="background-color: #f7c59f; padding: 20px 0; text-align:center ;">
-    <nav style="background-color: #d46a6a; overflow: hidden; position: fixed; width: 100%; top: 0; z-index: 1000;">
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;"> 
-        <div style="font-size: 24px; font-weight: bold; color: white;"> 
-          <a href="#" style="text-decoration: none; color: white; text-align: left;"> GOD'S GRACE BAGS</a> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - God's Grace Bags</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff8f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /* Fixed Navbar */
+        nav {
+            background-color: #d46a6a;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #f7c59f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #f7c59f;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        /* Main Content */
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 110px;
+            font-style: oblique;
+            text-align: center;
+            margin: 20px 0;
+            color: #d46a6a;
+        }
+        .about-box {
+            background-color: #fff;
+            border: 2px solid #f7c59f;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 25px;
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+        /* Footer */
+        footer {
+            background-color: #f7c59f;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-links li {
+            margin: 0 15px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .footer-links a:hover {
+            color: #d46a6a;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #d46a6a;
+            margin: 20px 0;
+        }
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 60px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links li {
+                margin: 0 10px;
+            }
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header>
+        <nav id="mainNav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">GOD'S GRACE BAGS</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus2.html">Contact Us</a></li>
+                    <li><a href="news2.html">News</a></li>
+                    <li><a href="services2.html">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>GOD'S GRACE BAGS PTY</h1>
+        <h1>ABOUT US</h1>
+
+        <div class="about-box">
+            <p>At God's Grace Bags, we believe that faith is more than words—it's a lifestyle. Our mission is to create beautifully designed, high-quality bags that not only carry your essentials but also carry a message of hope, love, and faith.</p>
+
+            <p>Each bag is crafted with care and inspired by scripture, reminding you of God's grace in every step of your journey. Whether you're heading to church, work, or a casual outing, our bags are a symbol of faith and encouragement for you and those around you.</p>
+
+            <p>Join us in spreading the message of grace—one bag at a time.</p>
+
+            <p>God's grace is with you always.</p>
         </div>
-    
-        <ul style="list-style: none; margin:0 ; padding: 0; display: flex;">
-         <li style="margin-left: 20px;"><a href="index.html" style="text-decoration: none; color: white; font-weight: bold;">Home</a></li>
-          <li style="margin-left: 20px;"><a href="aboutus.html" style="text-decoration: none; color: white; font-weight: bold;">Aboutus</a></li>
-         <li style="margin-left: 20px;"><a href="contactus2.html" style="text-decoration: none; color: white; font-weight: bold;"> Contactus</a></li> 
-          <li style="margin-left: 20px;"><a href="news2.html"style="text-decoration: none; color: white; font-weight: bold;">News</a></li>
-         <li style="margin-left: 20px;"><a href="services2.html" style="text-decoration: none; color: white; font-weight: bold;">Services</a></li> 
-          </ul>
-       </div>
-     </nav>
-  </header> 
-  <!--Add space to prevent conetent from being hidden behind the fixed bar --> 
-  <div style="margin-top: 100px;"><!--Increased space for fixed navbar --> 
-    <h1 style="font-size: 110PX;font-style: oblique; text-align: center; margin: 20px 0 ;">GOD'S GRACE BAGS  PTY</h1>
+    </div>
 
-  <h1 style="font-size: 110PX;font-style: oblique; text-align: center; margin: 20px 0 ;">About US</h1>    
-  <p1 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">At Gods grace bags,we believe that faith is more than words-its a lifestyle.
-    <br> Our mission is to create beutifully designed ,high-quality bags that not only carry your essentials
-    but also carry a message of hope,love,and faith</p1><br>
-<br>
-<p2 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Each bag is crafted with care and inspired by scripture ,reminding you of God's grace in ever step of your journey.
-  <br> Whether you're heading to church,work,or a casual outing,our bags are a symbol of faith and encouragement for you and those 
-  around you
-</p2><br>
-<br>
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus2.html">Contact Us</a></li>
+            <li><a href="news2.html">News</a></li>
+            <li><a href="services2.html">Services</a></li>
+        </ul>
+    </footer>
 
-<p3 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">Join us in spreading the message of grace-ine bag at a time</p3> <br>
-
-<p4 style="font-size: 25px; margin: 15px 0; line-height: 1.6;">God's grace is with you always</p4>
-<br>
-
-<img src="images2/ggb tote bag.png" style="width: 775px;height: 775PX; padding: 100px;">
- 
-  
-  
-  
-
-
-<footer style="left: 0; right: 0;  background-color:brown;">
-  &copy; <p style="color: white; text-align: center;">God's Grace 2025</p>
-</footer>
-
+    <script>
+        // Navigation verification
+        document.querySelectorAll('nav a, footer a').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log(`Navigating to: ${this.getAttribute('href')}`);
+                // Default navigation behavior will occur
+            });
+        });
+        
+        // Page load confirmation
+        window.addEventListener('load', () => {
+            console.log("About Us page loaded successfully");
+            alert("Welcome to God's Grace Bags About Us page!");
+        });
+    </script>
 </body>
-
-
-    </head>  
-
-
-
-
-
-
-
-
-
 </html>
